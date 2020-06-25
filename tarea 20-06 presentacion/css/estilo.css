@@ -1,0 +1,159 @@
+*{
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+	font-family: 'Yantramanav', sans-serif;
+}
+body{
+	background-color:#12191F;
+}
+#header{
+	display: flex; 
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	height:75px;
+	background: #3a7bd5;
+}
+
+#logo{
+	flex-basis: 55%;
+	flex-grow: 1;
+	padding:10px; 
+	margin-left: 20px;
+	color:white;
+}
+
+#logo h1{
+	font-family: 'Yantramanav', sans-serif;
+	font-size: 24px;
+	letter-spacing: 2px;
+	text-shadow: 4px 2px 2px rgba(150, 150, 150, 1);
+}
+
+#menu{
+	flex-grow: 1;
+	flex-basis: 30%;
+	height: 100%;
+	padding-right:20px;
+}
+
+#menu > ul{
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+ 	list-style: none;
+
+}
+
+#menu a{
+	text-transform: uppercase;
+	color:white;
+	font-size:14px;
+	padding:10px;
+	font-family: 'Yantramanav', sans-serif; 
+	transition: all 300ms;
+}
+
+#menu a:hover{
+	background: #96DEDA;
+	font-weight: bold;
+	color:blue;
+}
+
+.triangulo{
+	clip-path: polygon(50% 57%, 1% 0, 100% 0);
+	background:#3a7bd5;
+	width: 100px;
+	height: 70px;
+	margin: 0px auto;
+}
+#presentacion{
+	background-color: black;
+	width: 65%;
+	margin: 0px auto;
+}
+
+
+.triangulitoTop{
+	clip-path: polygon(50% 32%, 23% 0, 74% 0);
+	background-color:#12191F;
+	width: 50px;
+	height: 35px;
+	margin: 0px auto;
+}
+
+
+/*Presentacion*/
+#presentacion{
+	height: 372px;
+}
+	
+
+/*Tarjetas*/
+#cards{
+	display:flex;
+	/*Para mover elementos a la derecha*/
+	flex-direction: row;
+	flex-wrap:wrap;
+	height: 250px;
+	color:white;
+	justify-content: center;
+
+}
+
+
+.tarjeta{
+	flex-basis:25%;
+	flex-grow: 1;
+	order:1;
+	padding:80px;
+	justify-content: center;
+
+}
+
+.arreglo{
+	margin-left: 80px;
+}
+.tarjeta img{
+	border-radius:100%;
+}
+
+
+.tarjeta b{
+	color:#3140AF;
+}
+.arreglo{
+	padding-left: 20px;
+}
+
+.linea{
+	clip-path: inset(0 52% 0 44%);
+	background:#3140AF;
+	width: 50px;
+	height: 300px;
+	position:absolute;
+	top:30%;
+	right:48%;
+}
+#iconos{
+	display: flex;
+	list-style: none;
+	color: white;
+	padding-left: 5px;
+}
+
+#iconos img{
+	width: 20px;
+}
+
+.triangulitoBottom{
+	clip-path: polygon(48% 0, 23% 27%, 73% 27%);
+	background-color:#12191F;
+	width: 50px;
+	height: 35px;
+	margin:78px auto 0px auto;
+}
