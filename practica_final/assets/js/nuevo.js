@@ -2,6 +2,7 @@ import * as modulo from './modulo_funciones.js';
 
 $(document).ready((e) => {
     let tareas = modulo.getTareasEnStorage();
+    //estos booleanos permiten que si se presionan los botones no se mantenga imprimiendo las mismas tareas
     let todoMostrado= false;
     let mostrarCompletadas=false;
     let mostrarIncompletadas=false;
@@ -10,7 +11,7 @@ $(document).ready((e) => {
     // window.JSON
 
 
-
+    //esto muestra todas las tareas
     $('#btn-todo').click(function (e) {
         mostrarCompletadas=false;
         mostrarIncompletadas=false;
@@ -28,7 +29,7 @@ $(document).ready((e) => {
             }
         
         if(todoMostrado==false){
-           
+        //este imprime la informacion en la pantalla
         for (let i = 0; i < tareas.length; i++) {
 
             let contenedorTareas = $('article.lista-tareas-contenido');
@@ -54,9 +55,10 @@ $(document).ready((e) => {
 
          todoMostrado=true;    
         }//aqui termina if
+
            //Para que las tareas se vuelvan completadas
         $('.btn-primary').click(function (e) {
-               
+               //este toma el ID del boton para escoger el objeto correcto
                 tareas[this.id]={
                     titulo:tareas[this.id].titulo,
                     descripcion:tareas[this.id].descripcion,
@@ -148,10 +150,10 @@ $(document).ready((e) => {
         
             if(confirm("Estas seguro que deseas eliminar elemento?")){  
 
-                //remove item selected, second parameter is the number of items to delete 
+                //esto corta el Array desde el id seleccionado hasta la cantidad de elementos que se le indican
                 tareas.splice(this.id, 1);
 
-                // Put the object into storage
+                //Agregaga el objeto al local storage
                 localStorage.setItem('tareas', JSON.stringify(tareas));
              }
         });
@@ -199,3 +201,4 @@ $(document).ready((e) => {
         
     });
 });
+
